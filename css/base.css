@@ -1,0 +1,203 @@
+*{
+	/*background: rgba(0,0,0, .1);*/
+	box-sizing: border-box; 
+	transition: background .3s;	
+	/*outline:0;*/
+}
+
+body{
+	background: #427362;
+	color:#fff;
+}
+.container{
+	max-width: 700px;
+	margin: 0 auto;
+	position: relative;
+	padding:0 10px;
+}
+
+h1{
+	text-align: center;
+}
+.task-list{
+	margin:20px 0;
+}
+
+.fr{
+	float: right;
+}
+
+input, 
+.task-item,
+.task-detail-mask,
+.task-detail,
+textarea,
+button{
+	padding: 10px;
+	border-radius: 5px;
+}
+
+textarea,
+button,
+input[type=text], input[type=date]{
+	border: 0;
+}
+
+
+textarea,
+input[type=text], input[type=date]{
+	width: 100%;
+	display: block;
+	background: #ddd;
+	box-shadow: inset 0 1px 2px rgba(0,0,0,.3)
+}
+
+textarea{
+	min-height: 100px;
+}
+
+textarea:hover,
+textarea:focus,
+input[type=text]:focus,
+input[type=date]:focus,
+input[type=text]:hover,
+input[type=date]:hover{
+	background: #eee;
+	box-shadow: inset 0 1px 2px rgba(0,0,0,.2)
+}
+
+
+button{
+	display: inline-block;
+	cursor: pointer;
+	border: 0;
+	color: #333;
+}
+
+.add-task input[type=text]{
+	float: left;
+	width: 84%;
+	margin-right: 1%;
+}
+
+button.primary,
+[type=submit]{
+	background: #3fab25;
+}
+
+.add-task [type=submit]{
+	background: #3fab25;
+	width: 15%;
+}
+
+.add-task [type=submit],
+.task-item {
+	box-shadow: 5px 5px 10px rgba(0,0,0,.5)
+}
+
+
+.add-task [type=submit]:hover{
+	background: #31ff00;
+}
+
+.task-item{
+	
+	background: #fff;
+	color:#333;
+	margin-bottom: 2px;	
+	cursor:pointer;
+ 
+}
+
+.task-item.completed{
+	color:#aaa;
+	/*background: rgba(255,255,255,.7);*/
+	opacity: 0.4;
+}
+
+
+.task-item.completed:after {
+	content:"";
+	height: 1px;
+	background: #aaa;
+	width:96%;
+	position: relative;
+	top:-8px;
+	display: block;
+	float: right;
+
+}
+.task-item:hover{
+	background: #ddd;
+}
+
+.task-detail-mask,.task-detail{
+	display: none;
+	position: absolute;
+}
+
+
+.task-detail{
+	background: #a8b785;
+	color: #333;
+	width: 50%;
+	height: 320px;
+	padding:10px;
+	top:0;
+	right:0;
+}
+
+.task-detail .content{
+	padding: 10px;
+	font-weight: 900;
+	cursor: pointer;
+}
+
+.task-detail .input-item{
+	margin-bottom: 10px;
+}
+
+.task-detail-mask{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background: rgba(30,30,30,.6)
+}
+
+.task-content{
+	margin-left:10px;
+}
+
+
+
+.action{
+	color:#888;
+	font-size: 90%;
+
+}
+
+
+.action:hover{
+	color: #333;
+}
+
+
+.msg{
+	display: none;
+	text-align: center;
+	background: #e45656;
+	padding: 20px;
+	color:#fff;
+}
+
+.anchor{
+	cursor: pointer;
+
+}
+
+.alerter{
+	width: 0;
+	height:0;
+}
